@@ -1,22 +1,22 @@
 // array methods
 
-// 1.push() method
+// 1.unshift() method
 
-//we can add one or more elements in array from last index.it returns length of the array and also we can merge the arrays.
+//we can add one or more elements in array from 1st index.it returns length of the array and also we can merge the arrays.
 
 const arr = [1,2,3,4];
 
-const res = arr.push(5,6,7); //returns length of array (7)
+const res = arr.unshift(5,6,7); //returns length of array (7)
 
 console.log(res);  // 7
-console.log(arr);  //[1, 2, 3, 4, 5, 6, 7]
+console.log(arr);  //[5, 6, 7, 1, 2, 3, 4]
 // ---------------------------------------------------
 const strarr = ['pandu','sai','madhu'];
 
-const res1 = strarr.push('bhargavi','sandy'); //returns length of array (5)
+const res1 = strarr.unshift('bhargavi','sandy'); //returns length of array (5)
 
 console.log(res1);  // 5
-console.log(strarr); //["pandu", "sai", "madhu", "bhargavi", "sandy"]
+console.log(strarr); //["bhargavi", "sandy", "pandu", "sai", "madhu"]
 
 // ---------------------------------------------------
 
@@ -24,8 +24,8 @@ const x = ['pandu','sai']; //array 1
 
 const y = ['bhargavi','sandy']; //array 2
 
- x.push(...y);  // here we can merge the 2nd array into the 1st array.
-console.log(x);  // ["pandu", "sai", "bhargavi", "sandy"]
+ x.unshift(...y);  // here we can merge the 2nd array into the 1st array.
+console.log(x);  // ["bhargavi", "sandy", "pandu", "sai"]
 
 var data = [];
 // ...
@@ -49,7 +49,7 @@ data1[1] = { "ID": "2", "Status": "Invalid" };
 var tempData1 = [];
 for ( var index=0; index<data1.length; index++ ) {
     if ( data1[index].Status == "Valid" ) {
-        tempData1.push( data1 );
+        tempData1.unshift( data1 );
     }
 }
 data1 = tempData1;
@@ -78,7 +78,7 @@ console.log(tempData1);
        my_object.eye_color = "green";
         
     // push the object to Array
-       data_array.push(my_object);
+       data_array.unshift(my_object);
 
      console.log(data_array)
      /*
@@ -100,20 +100,20 @@ let data_array1 = [];
 
  
 // push the objects to Array
-data_array1.push(my_object1);
-data_array1.push(my_object2);
+data_array1.unshift(my_object1);
+data_array1.unshift(my_object2);
 
 console.log(data_array1); 
 /* output ==>
 [[object Object] {
-  city: "hyd",
-  id: 1,
-  name: "sai"
-}, [object Object] {
   city: "wgl",
   id: 2,
   name: "pandu"
-}]  */
+}, [object Object] {
+  city: "hyd",
+  id: 1,
+  name: "sai"
+}] */
 
 // ------------------------
 // our arrays
@@ -121,9 +121,9 @@ let array1 = [1,2,4,5];
 let array2 = [6,7,8,9];
 
 // push the array to Array
-array1.push(array2);
+array1.unshift(array2);
 
-console.log(array1);  // [1, 2, 4, 5, [6, 7, 8, 9]]
+console.log(array1); //[[6, 7, 8, 9], 1, 2, 4, 5]
 
 
 
